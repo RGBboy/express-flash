@@ -1,7 +1,10 @@
-// Flash Component Example
+/*!
+ * express-flash example
+ */
 
-// MODULE DEPENDENCIES
-// -------------------
+/**
+ * Module dependencies.
+ */
 
 var express = require('express'),
     app = module.exports = express(),
@@ -13,7 +16,6 @@ app.set('view engine', 'jade');
 app.set('view options', { layout: false });
 
 // Configuration
-
 app.use(express.bodyParser());
 app.use(express.static(__dirname + '/public'));
 
@@ -23,6 +25,7 @@ app.use(express.session({ cookie: { maxAge: 60000 }}));
 // Flash
 app.use(flash());
 
+// Routes
 app.get('/', function (req, res) {
   res.render('index', {
     title: 'Home'
@@ -51,13 +54,12 @@ app.get('/add-and-show-message', function (req, res) {
   });
 });
 
-// Router
-app.use(app.router);
 // Error Handler
 app.use(express.errorHandler());
 
-// MODULE EXPORTS
-// --------------
+/**
+ * Module exports.
+ */
 
 if (!module.parent) {
   app.listen(8000);

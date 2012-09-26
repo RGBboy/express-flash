@@ -1,2 +1,2 @@
 
-exports = module.exports = require('./lib/flash');
+exports = module.exports = require('./lib/express-flash');

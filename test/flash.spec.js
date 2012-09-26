@@ -1,5 +1,5 @@
 /*!
- * flash spec
+ * express-flash spec
  */
 
 // MODULE DEPENDENCIES

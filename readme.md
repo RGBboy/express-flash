@@ -1,6 +1,8 @@
-# Flash Component
+# Express Flash
 
   Flash Messages for your Express Application
+
+  [![Build Status](https://secure.travis-ci.org/RGBboy/express-flash.png)](http://travis-ci.org/RGBboy/express-flash)
 
   Flash is an extension of `connect-flash` with the ability to define a flash message
   and render it without redirecting the request.
