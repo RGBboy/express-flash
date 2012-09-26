@@ -7,6 +7,13 @@
   Flash is an extension of `connect-flash` with the ability to define a flash message
   and render it without redirecting the request.
 
+## Installation
+
+  Works with Express 3.0.x
+
+    npm install git://github.com/RGBboy/express-flash.git
+
+
 ## Usage
 
   Set it up the same way you would `connect-flash`:
