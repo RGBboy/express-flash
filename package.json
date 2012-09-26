@@ -1,0 +1,27 @@
+{
+  "name": "flash",
+  "version": "0.0.1",
+  "description": "Flash Messages for your Express Application",
+  "homepage": "https://github.com/RGBboy/flash",
+  "keywords": ["express", "flash", "messages"],
+  "author": "RGBboy <me@rgbboy.com>",
+  "main": "index",
+  "engines": {
+    "node": "0.8.x"
+  },
+  "dependencies": {
+    "connect-flash": "0.1.x"
+  },
+  "devDependencies": {
+    "express": "3.0.x",
+    "jade": "0.27.x",
+    "mocha": "1.5.x",
+    "superagent": "0.9.x",
+    "should": "1.2.x"
+  },
+  "scripts" : {
+    "test" : "make test",
+    "unit" : "make unit",
+    "spec" : "make spec"
+  }
+}

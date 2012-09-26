@@ -1,0 +1,35 @@
+!!! 5
+html
+  head
+    title= title
+    block stylesheets
+      link(rel = 'stylesheet', href = '/css/style.css')
+      link(rel = 'stylesheet', href = '/css/bootstrap.min.css')
+      link(rel = 'stylesheet', href = '/css/bootstrap-responsive.min.css') 
+  body
+    .container-fluid
+      .messages
+        - if (messages.info)
+          - each message in messages.info
+            .alert.alert-success
+              button.close(type = 'button', data-dismiss = 'alert') ×
+              strong Info: 
+              span= message
+      .main.row-fluid
+        .span3
+          ul.well.nav.nav-list
+            li
+              a(href = '/') Home
+            li
+              a(href = '/add-message') Add Message
+            li
+              a(href = '/add-messages') Add Messages
+            li
+              a(href = '/add-and-show-message') Add and Show Message
+            
+        .span9
+          h1.page-header= title
+          block content
+    block javascripts
+      script(src = '/js/jquery-1.8.0.min.js')
+      script(src = '/js/bootstrap.min.js')
