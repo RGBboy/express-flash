@@ -9,7 +9,7 @@
 
 ## Installation
 
-  Works with Express 3.0.x
+  Works with Express 3.x.x
 
     npm install git://github.com/RGBboy/express-flash.git
 
