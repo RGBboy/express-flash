@@ -20,13 +20,6 @@ describe('Flash Messages', function () {
   before(function (done) {
     var port = 8000;
     server = app.listen(port);
-    // setTimeout on connection so we can close the server.
-    server.on('connection', function (req) {
-      req.setTimeout(50, function () {
-        console.log('closing connection');
-        req.end();
-      });
-    });
     baseURL = 'http://localhost:' + port;
     done();
   });
