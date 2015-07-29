@@ -53,6 +53,7 @@ Access the messages in your views via `locals.messages` (.jade in this case):
 
 ## Requires
 
+  * connect-flash
   * cookieParser
   * session
 
