@@ -54,12 +54,13 @@ Access the messages in your views via `locals.messages` (.jade in this case):
 Access messages in Handlebars views use `locals.messages`:
 
 ```handlebars
+
+{{#if messages.info}}
 <div class="entry">
     <h1> {{messages.info}}</h1>
 </div>
+{{/if}}
 ```
-
-
 ## Requires
 
   * cookieParser
