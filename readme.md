@@ -51,6 +51,15 @@ Access the messages in your views via `locals.messages` (.jade in this case):
       span= messages.info
 ```
 
+Access messages in Handlebars views use `locals.messages`:
+
+```handlebars
+<div class="entry">
+    <h1> {{messages.info}}</h1>
+</div>
+```
+
+
 ## Requires
 
   * cookieParser
