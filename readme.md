@@ -9,22 +9,28 @@
 
 ## Installation
 
-  Works with Express 3.x.x
+  Works with Express 3.x.x+
 
-    npm install git://github.com/RGBboy/express-flash.git
-
+    `npm install git://github.com/RGBboy/express-flash.git`
 
 ## Usage
 
   Set it up the same way you would `connect-flash`:
 
 ``` javascript
-  var flash = require('express-flash'),
-      express = require('express'),
-      app = express();
+  let flash = require('express-flash');
+  let express = require('express');
+  let session = require('express-session');
+  let app = express();
 
-  app.use(express.cookieParser('keyboard cat'));
-  app.use(express.session({ cookie: { maxAge: 60000 }}));
+  // initialise session middleware - flash-express depends on it
+  app.use(session({
+    secret : "<add a secret string here>",
+    resave: false,
+    saveUninitialized: true
+  }));
+
+  // initialise the flash middleware
   app.use(flash());
 ```
 
@@ -43,30 +49,21 @@ Use `req.flash()` in your middleware
   });
 ```
 
-Access the messages in your views via `locals.messages` (.jade in this case):
-
-``` jade
-  - if (messages.info)
-    .message.info
-      span= messages.info
-```
-
 Access messages in Handlebars views use `locals.messages`:
 
 ```handlebars
-
 {{#if messages.info}}
 <div class="entry">
     <h1> {{messages.info}}</h1>
 </div>
 {{/if}}
 ```
+
 ## Requires
 
-  * cookieParser
-  * session
+  * session - http-session middleware - install it using `npm install --save express-session`
 
-## License 
+## License
 
 (The MIT License)
 
