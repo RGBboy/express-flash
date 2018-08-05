@@ -18,10 +18,10 @@
   Set it up the same way you would `connect-flash`:
 
 ``` javascript
-  let flash = require('express-flash');
-  let express = require('express');
-  let session = require('express-session');
-  let app = express();
+  const flash = require('express-flash');
+  const express = require('express');
+  const session = require('express-session');
+  const app = express();
 
   // initialise session middleware - flash-express depends on it
   app.use(session({
