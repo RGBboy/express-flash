@@ -9,9 +9,13 @@
 
 ## Installation
 
-  Works with Express 3.x.x+
+Install it using:
 
-    `npm install git://github.com/RGBboy/express-flash.git`
+```
+npm install --save express-flash
+npm install --save express-session
+```
+
 
 ## Usage
 
