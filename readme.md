@@ -23,8 +23,8 @@ npm install --save express-session
 
 ``` javascript
   const flash = require('express-flash');
-  const express = require('express');
   const session = require('express-session');
+  const express = require('express');
   const app = express();
 
   // initialise session middleware - flash-express depends on it
